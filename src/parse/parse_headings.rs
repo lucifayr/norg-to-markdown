@@ -3,10 +3,10 @@ use regex::Regex;
 use crate::regex::captures::lenght_of_nth_capture;
 
 pub fn parse_headings(line: &str) -> Result<String, regex::Error> {
-    let regex = Regex::new(r"(?m:^\*{1,5}\s)")?;
+    let regex = Regex::new(r"(?m:^\*{1,7}\s)")?;
     let amount = lenght_of_nth_capture(&regex, line, 0);
 
-    let arr = vec!["#"; amount];
+    let arr = vec!["#"; amount.clamp(0, 5)];
     Ok(regex.replace(line, arr.join("") + " ").to_string())
 }
 
@@ -26,6 +26,14 @@ mod tests {
         assert_eq!(
             parse_headings("not a * heading"),
             Ok("not a * heading".to_owned())
+        );
+        assert_eq!(
+            parse_headings("******* long heading"),
+            Ok("##### long heading".to_owned())
+        );
+        assert_eq!(
+            parse_headings("******** long heading"),
+            Ok("******** long heading".to_owned())
         );
     }
 }
