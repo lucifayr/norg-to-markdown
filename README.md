@@ -11,6 +11,7 @@ This tool is in the very early stages of development so many things don't work y
 - headers
 
 ### What doesn't work
+- links
 - checklists
 - quotes
 - blocks (Definitions, etc.)
