@@ -3,8 +3,8 @@ use regex::Regex;
 use crate::regex::captures::lenght_of_nth_capture;
 
 pub fn parse_headings(line: &str) -> Result<String, regex::Error> {
-    let regex = Regex::new(r"(?m:^\*{1,7}\s)")?;
-    let amount = lenght_of_nth_capture(&regex, line, 0);
+    let regex = Regex::new(r"^(\*{1,7})\s")?;
+    let amount = lenght_of_nth_capture(&regex, line, 1);
 
     let arr = vec!["#"; amount.clamp(0, 6)];
     Ok(regex.replace(line, arr.join("") + " ").to_string())
