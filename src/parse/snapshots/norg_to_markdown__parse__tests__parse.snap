@@ -8,6 +8,7 @@ expression: res
 - bullet point 1
 - bullet point 2
 - bullet point 3
+- **bold bullet point**
 	- sub bullet point 1
 		- sub sub bullet point 1
 		- sub sub bullet point 2
@@ -16,3 +17,4 @@ expression: res
 
 ## to do 
 nothing
+*italic* and **bold** text!

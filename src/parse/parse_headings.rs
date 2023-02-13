@@ -29,11 +29,11 @@ mod tests {
         );
         assert_eq!(
             parse_headings("******* long heading"),
-            Ok("##### long heading".to_owned())
+            Ok("###### long heading".to_owned())
         );
         assert_eq!(
-            parse_headings("******** long heading"),
-            Ok("******** long heading".to_owned())
+            parse_headings("******** very long heading"),
+            Ok("******** very long heading".to_owned())
         );
     }
 }
