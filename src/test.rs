@@ -27,7 +27,7 @@ some text in between with bold italic */highlights/*.
    ~ level 2 order list entry 1
 
 ~ order list entry 1
-- unorder list entry 1
+- unorder list entry 1 with a {:link:}
 ~ order list entry 1
 
    ~~~ level 2 order list entry 1
@@ -36,6 +36,7 @@ some text in between with bold italic */highlights/*.
 
 ** To Do 
 normal text.
+{:a link to a file:}
 /italic/ and *bold* text!";
 
         let res = convert(text).unwrap();

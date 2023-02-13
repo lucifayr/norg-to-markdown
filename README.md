@@ -9,9 +9,9 @@ This tool is in the very early stages of development so many things don't work y
 - unordered lists
 - ordered lists
 - headers
+- links
 
 ### What doesn't work
-- links
 - checklists
 - quotes
 - blocks (Definitions, etc.)

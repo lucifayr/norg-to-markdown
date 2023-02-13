@@ -23,6 +23,9 @@
 #### Or this one
 ##### Etc.
 
-## Highlighting also works
+## Highlighting 
    Here is some **bold text** and some *italic text* 
    and even some ***bold italic text***!
+
+## Links
+   Here is a link to the [README](README.md)
