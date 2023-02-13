@@ -1,6 +1,7 @@
 use self::{parse_headings::parse_headings, parse_ul::parse_ul};
 
 pub mod parse_headings;
+pub mod parse_highlighting;
 pub mod parse_ul;
 
 pub fn parse(line: &str) -> Result<String, regex::Error> {
@@ -25,6 +26,7 @@ mod tests {
 --- sub sub bullet point 2
 ---- sub sub bullet point 2
 -fake bullet point
+
 ** to do 
 nothing";
 
