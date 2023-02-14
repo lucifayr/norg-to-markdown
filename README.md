@@ -4,20 +4,18 @@ This is a simple CLI tool to convert [.norg](https://github.com/nvim-neorg/norg-
 ## Note
 This tool is in the very early stages of development so many things don't work yet.
 
-### What works
-- highlighting (bold, italic)
-- unordered lists
-- ordered lists
-- headers
-- links
-
-### What doesn't work
-- checklists
-- quotes
-- blocks (Definitions, etc.)
-- footnotes
-- tables
-- attributes
+### Features
+- [x] headers
+- [] footnotes
+- [x] highlighting (bold, italic)
+- [x] unordered lists
+- [x] ordered lists
+- [] checklists
+- [] tables
+- [x] links
+- [] quotes
+- [] blocks (Definitions, etc.)
+- [] attributes
 
 ## Installation
 
