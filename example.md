@@ -31,8 +31,8 @@
    Here is a link to the [README](README.md)
 
 ## Checklists
-	- [] todo item
+	- [ ] todo item
 	- [x] done item
-	- [] cancelled item (put down/cancelled)
-	- [] not done item (didn't do)
-	- [] urgent item (urgent)
+	- [ ] cancelled item (put down/cancelled)
+	- [ ] not done item (didn't do)
+	- [ ] urgent item (urgent)
