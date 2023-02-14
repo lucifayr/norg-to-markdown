@@ -29,3 +29,10 @@
 
 ** Links
    Here is a link to the {:README:}
+
+** Checklists
+   - () todo item
+   - (x) done item
+   - (_) cancelled item
+   - ( ) not done item
+   - (!) urgent item

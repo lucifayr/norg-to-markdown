@@ -1,7 +1,7 @@
 use regex::Regex;
 
 pub fn parse_todo(line: &str) -> Result<String, regex::Error> {
-    let regex = Regex::new(r"^(\s*-{1,7}\s)\(([ x?!+=_-]?)\)(.*)")?;
+    let regex = Regex::new(r"^(\s*-{1,7}\s)\(\s*?([ x?!+=_-]?)\s*\)(.*)")?;
     let status = match regex.captures(line) {
         Some(cap) => match cap.get(2) {
             Some(mat) => mat.as_str(),
@@ -41,6 +41,10 @@ mod tests {
         );
         assert_eq!(
             parse_todo("- (x) todo item"),
+            Ok("- [x] todo item".to_owned())
+        );
+        assert_eq!(
+            parse_todo("- ( x  ) todo item"),
             Ok("- [x] todo item".to_owned())
         );
         assert_eq!(

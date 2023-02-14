@@ -10,7 +10,7 @@ This tool is in the very early stages of development so many things don't work y
 - [x] highlighting (bold, italic)
 - [x] unordered lists
 - [x] ordered lists
-- [] checklists
+- [x] checklists
 - [] tables
 - [x] links
 - [] quotes
