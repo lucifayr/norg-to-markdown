@@ -3,7 +3,7 @@ use regex::Regex;
 use crate::regex::captures::lenght_of_nth_capture;
 
 pub fn parse_ul(line: &str) -> Result<String, regex::Error> {
-    let regex = Regex::new(r"^(\s*)(-{1,7})\s")?;
+    let regex = Regex::new(r"^(\s*)-{1,7}\s")?;
     let amount = lenght_of_nth_capture(&regex, line, 1) / 3;
 
     let tabs = vec!["\t"; amount];

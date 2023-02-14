@@ -37,7 +37,16 @@ some text in between with bold italic */highlights/*.
 ** To Do 
 normal text.
 {:a link to a file:}
-/italic/ and *bold* text!";
+/italic/ and *bold* text!
+
+** Checklist
+- () unchecked
+- (x) checked
+- (=) pending
+- (?) more info needed
+- (_) dropped
+- ( ) not done
+";
 
         let res = convert(text).unwrap();
         insta::assert_snapshot!(res);

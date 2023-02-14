@@ -36,3 +36,11 @@ some text in between with bold italic ***highlights***.
 normal text.
 [a link to a file](a link to a file.md)
 *italic* and **bold** text!
+
+## Checklist
+- [] unchecked
+- [x] checked
+- [] pending (on hold)
+- [] more info needed (needs further input/clarification)
+- [] dropped (put down/cancelled)
+- [] not done (didn't do)
