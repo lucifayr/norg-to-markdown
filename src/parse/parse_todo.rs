@@ -10,7 +10,7 @@ pub fn parse_todo(line: &str) -> Result<String, regex::Error> {
         None => "",
     };
 
-    let done = if status == "x" { "x" } else { "" };
+    let done = if status == "x" { "x" } else { " " };
     let suffix = match status {
         " " => " (didn't do)",
         "?" => " (needs further input/clarification)",
@@ -37,7 +37,7 @@ mod tests {
         assert_eq!(parse_todo("- item"), Ok("- item".to_owned()));
         assert_eq!(
             parse_todo("- () todo item"),
-            Ok("- [] todo item".to_owned())
+            Ok("- [ ] todo item".to_owned())
         );
         assert_eq!(
             parse_todo("- (x) todo item"),
@@ -49,11 +49,11 @@ mod tests {
         );
         assert_eq!(
             parse_todo("- (_) todo item"),
-            Ok("- [] todo item (put down/cancelled)".to_owned())
+            Ok("- [ ] todo item (put down/cancelled)".to_owned())
         );
         assert_eq!(
             parse_todo("- (=) todo item"),
-            Ok("- [] todo item (on hold)".to_owned())
+            Ok("- [ ] todo item (on hold)".to_owned())
         );
         assert_eq!(
             parse_todo("- (r) todo item"),

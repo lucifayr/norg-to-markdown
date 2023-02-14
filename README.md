@@ -6,16 +6,16 @@ This tool is in the very early stages of development so many things don't work y
 
 ### Features
 - [x] headers
-- [] footnotes
+- [ ] footnotes
 - [x] highlighting (bold, italic)
 - [x] unordered lists
 - [x] ordered lists
 - [x] checklists
-- [] tables
+- [ ] tables
 - [x] links
-- [] quotes
-- [] blocks (Definitions, etc.)
-- [] attributes
+- [ ] quotes
+- [ ] blocks (Definitions, etc.)
+- [ ] attributes
 
 ## Installation
 

@@ -38,9 +38,9 @@ normal text.
 *italic* and **bold** text!
 
 ## Checklist
-- [] unchecked
+- [ ] unchecked
 - [x] checked
-- [] pending (on hold)
-- [] more info needed (needs further input/clarification)
-- [] dropped (put down/cancelled)
-- [] not done (didn't do)
+- [ ] pending (on hold)
+- [ ] more info needed (needs further input/clarification)
+- [ ] dropped (put down/cancelled)
+- [ ] not done (didn't do)
