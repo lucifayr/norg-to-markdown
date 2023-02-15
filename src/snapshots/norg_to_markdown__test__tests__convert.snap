@@ -44,3 +44,13 @@ normal text.
 - [ ] more info needed (needs further input/clarification)
 - [ ] dropped (put down/cancelled)
 - [ ] not done (didn't do)
+
+```
+const var = 'this is some code';
+console.log(var);
+```
+
+``` rust
+let var = "this is some better code";
+println!("{var}");
+```

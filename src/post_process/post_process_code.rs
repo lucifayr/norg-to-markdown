@@ -1,8 +1,12 @@
 use regex::Regex;
 
 pub fn post_process_code(text: &str) -> Result<String, regex::Error> {
-    let regex = Regex::new(r"(?ms:^@code(?P<lang> \w+)?.*?\n(?P<code>.*?)\n^@end)")?;
-    Ok(regex.replace_all(text, "```$lang\n$code\n```").to_string())
+    let regex = Regex::new(
+        r"(?ms:^(?P<s_pad>\s*)@code(?P<lang> \w+)?.*?\n(?P<code>.*?)\n^(?P<e_pad>\s*)@end)",
+    )?;
+    Ok(regex
+        .replace_all(text, "$s_pad```$lang\n$code\n$e_pad```")
+        .to_string())
 }
 
 #[cfg(test)]
@@ -24,6 +28,21 @@ console.log(var);
 const var = 12;
 console.log(var);
 ```
+";
+
+        assert_eq!(post_process_code(eg), Ok(res.to_owned()));
+
+        let eg = "
+        @code
+        const var = 12;
+        console.log(var);
+        @end
+";
+        let res = "
+        ```
+        const var = 12;
+        console.log(var);
+        ```
 ";
 
         assert_eq!(post_process_code(eg), Ok(res.to_owned()));

@@ -46,6 +46,16 @@ normal text.
    - (?) more info needed
    - (_) dropped
    - ( ) not done
+
+@code
+const var = 'this is some code';
+console.log(var);
+@end
+
+@code rust
+let var = \"this is some better code\";
+println!(\"{var}\");
+@end
 ";
 
         let res = convert(text).unwrap();
