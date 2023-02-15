@@ -27,3 +27,23 @@ pub fn pre_process_lists(text: &str) -> Result<String, regex::Error> {
 
     Ok(lines.join("\n"))
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_pre_process_lists() {
+        assert_eq!(pre_process_lists("text"), Ok("text".to_owned()));
+        assert_eq!(pre_process_lists("- item"), Ok("- item".to_owned()));
+        assert_eq!(pre_process_lists("   - item"), Ok("- item".to_owned()));
+        assert_eq!(
+            pre_process_lists("      - item"),
+            Ok("    - item".to_owned())
+        );
+        assert_eq!(
+            pre_process_lists("      - item      - not an item"),
+            Ok("    - item      - not an item".to_owned())
+        );
+    }
+}
