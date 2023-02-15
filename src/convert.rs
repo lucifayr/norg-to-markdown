@@ -27,13 +27,19 @@ fn parse_lines_threaded(lines: Vec<String>) -> String {
                 .join("\n")
                 + "\n";
 
-            sender.send((index, parsed)).unwrap();
+            sender
+                .send((index, parsed))
+                .expect("Failed to send value from thread");
         }));
     }
 
     let mut results = vec![];
     for _ in threads {
-        results.push(receiver.recv().unwrap());
+        results.push(
+            receiver
+                .recv()
+                .expect("Failed to receive value from thread"),
+        );
     }
 
     results.sort_by(|a, b| a.0.cmp(&b.0));
