@@ -6,6 +6,9 @@ mod tests {
     fn test_convert() {
         let text = "
 * heading
+some text
+   some text that shouldn't be indented
+
 *fake heading
    - bullet point 1
    - bullet point 2
