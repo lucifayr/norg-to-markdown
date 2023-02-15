@@ -9,11 +9,11 @@ expression: res
 - bullet point 2
 - bullet point 3
 - **bold bullet point**
-	- sub bullet point 1
-		- sub sub bullet point 1
-		- sub sub bullet point 2
-			- sub sub sub bullet point 1
--fake bullet point
+    - sub bullet point 1
+        - sub sub bullet point 1
+        - sub sub bullet point 2
+            - sub sub sub bullet point 1
+   -fake bullet point
 
 1. order list entry 1
 2. order list entry 2
@@ -22,15 +22,15 @@ some text in between with bold italic ***highlights***.
 
 1. level 1 order list entry 1
 2. level 1 order list entry 2
-	1. level 2 order list entry 1
+    1. level 2 order list entry 1
 
 1. order list entry 1
 - unorder list entry 1 with a [link](link.md)
 1. order list entry 1
 
-	1. level 2 order list entry 1
-	2. level 2 order list entry 2
-		1. level 3 order list entry 1
+    1. level 2 order list entry 1
+    2. level 2 order list entry 2
+        1. level 3 order list entry 1
 
 ## To Do 
 normal text.

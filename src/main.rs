@@ -8,6 +8,7 @@ mod cli;
 mod convert;
 mod parse;
 mod post_process;
+mod pre_process;
 mod regex;
 
 #[cfg(test)]
