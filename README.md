@@ -14,7 +14,7 @@ This tool is in the very early stages of development so many things don't work y
 - [ ] tables
 - [x] links
 - [ ] quotes
-- [ ] blocks (Definitions, etc.)
+- [x] code blocks
 - [ ] attributes
 
 ## Installation

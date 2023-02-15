@@ -36,3 +36,9 @@
    - (_) cancelled item
    - ( ) not done item
    - (!) urgent item
+
+** Code Blocks
+   @code rust 
+   let var = "This is a code block";
+   println("{var}");
+   @end 

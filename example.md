@@ -36,3 +36,9 @@
 - [ ] cancelled item (put down/cancelled)
 - [ ] not done item (didn't do)
 - [ ] urgent item (urgent)
+
+## Code Blocks
+   ``` rust
+   let var = "This is a code block";
+   println("{var}");
+   ``` 
