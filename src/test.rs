@@ -33,9 +33,9 @@ some text in between with bold italic */highlights/*.
    - unorder list entry 1 with a {:link:}
    ~ order list entry 1
 
-      ~ level 2 order list entry 1
-      ~ level 2 order list entry 2
-         ~ level 3 order list entry 1
+      ~ level 1 order list entry 1
+      ~ level 1 order list entry 2
+         ~ level 2 order list entry 1
 
 ** To Do 
 normal text.
