@@ -25,6 +25,9 @@ some text
 
 some text in between with bold italic */highlights/*.
 
+some text in between with 
+multiple paragraphs.
+
    ~ level 1 order list entry 1
    ~ level 1 order list entry 2
       ~ level 2 order list entry 1
@@ -37,7 +40,7 @@ some text in between with bold italic */highlights/*.
       ~ level 1 order list entry 2
          ~ level 2 order list entry 1
 
-** To Do 
+** To Do
 normal text.
 {:a link to a file:}
 /italic/ and *bold* text!

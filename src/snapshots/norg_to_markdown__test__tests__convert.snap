@@ -2,9 +2,11 @@
 source: src/test.rs
 expression: res
 ---
+
 # heading
 some text
 some text that shouldn't be indented
+
 *fake heading
 - bullet point 1
 - bullet point 2
@@ -18,7 +20,11 @@ some text that shouldn't be indented
 
 1. order list entry 1
 2. order list entry 2
+
 some text in between with bold italic ***highlights***.
+
+some text in between with 
+multiple paragraphs.
 
 1. level 1 order list entry 1
 2. level 1 order list entry 2
@@ -31,10 +37,12 @@ some text in between with bold italic ***highlights***.
 1. level 1 order list entry 1
 2. level 1 order list entry 2
     1. level 2 order list entry 1
-## To Do 
+
+## To Do
 normal text.
 [a link to a file](a link to a file.md)
 *italic* and **bold** text!
+
 ## Checklist
 - [ ] unchecked
 - [x] checked

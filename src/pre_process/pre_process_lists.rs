@@ -76,6 +76,14 @@ mod tests {
             Ok("- item      - not an item".to_owned())
         );
         assert_eq!(
+            pre_process_lists("- item\n\n- sub item"),
+            Ok("- item\n\n- sub item".to_owned())
+        );
+        assert_eq!(
+            pre_process_lists("- item\n\ntext"),
+            Ok("- item\n\ntext".to_owned())
+        );
+        assert_eq!(
             pre_process_lists("- item\n  - sub item"),
             Ok("- item\n    - sub item".to_owned())
         );
