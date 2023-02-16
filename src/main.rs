@@ -23,7 +23,10 @@ fn main() -> Result<(), io::Error> {
         Err(err) => panic!("Failed to convert {} to markdown: {}", args.input, err),
     };
 
-    let out_file = args.output.unwrap_or(format!("{}.md", args.input));
+    let out_file = args.output.unwrap_or(format!(
+        "{}.md",
+        args.input.split(".norg").next().unwrap_or("default.md")
+    ));
     fs::write(out_file, res)?;
 
     Ok(())
