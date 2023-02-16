@@ -1,8 +1,9 @@
 # Norg to Markdown
-This is a simple CLI tool to convert [.norg](https://github.com/nvim-neorg/norg-specs/blob/main/1.0-specification.norg) files to [GFM](https://github.github.com/gfm/). 
+A simple CLI tool to convert [.norg](https://github.com/nvim-neorg/norg-specs/blob/main/1.0-specification.norg) files to [GFM](https://github.github.com/gfm/). 
 
 ## Note
-This tool is in the very early stages of development so many things don't work yet.
+This tool is in the early stages of development so some features in the .norg specification are 
+not supported yet.
 
 ### Features
 - [x] headers
