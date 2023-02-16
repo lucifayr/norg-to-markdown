@@ -4,6 +4,7 @@ expression: res
 ---
 
 # heading
+
 some text
 some text that shouldn't be indented
 
@@ -39,11 +40,13 @@ multiple paragraphs.
     1. level 2 order list entry 1
 
 ## To Do
+
 normal text.
 [a link to a file](a link to a file.md)
 *italic* and **bold** text!
 
 ## Checklist
+
 - [ ] unchecked
 - [x] checked
 - [ ] pending (on hold)
