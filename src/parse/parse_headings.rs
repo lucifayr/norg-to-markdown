@@ -7,7 +7,7 @@ pub fn parse_headings(line: &str) -> Result<String, regex::Error> {
     let amount = lenght_of_nth_capture(&regex, line, 1);
 
     let arr = vec!["#"; amount.clamp(0, 6)].join("");
-    Ok(regex.replace(line, format!("{arr}$heading\n")).to_string())
+    Ok(regex.replace(line, format!("{arr}$heading")).to_string())
 }
 
 #[cfg(test)]
@@ -17,11 +17,11 @@ mod tests {
     #[test]
     fn test_parse_headings() {
         assert_eq!(parse_headings("text"), Ok("text".to_owned()));
-        assert_eq!(parse_headings("* heading1"), Ok("# heading1\n".to_owned()));
+        assert_eq!(parse_headings("* heading1"), Ok("# heading1".to_owned()));
         assert_eq!(parse_headings("*heading2"), Ok("*heading2".to_owned()));
         assert_eq!(
             parse_headings("** heading large"),
-            Ok("## heading large\n".to_owned())
+            Ok("## heading large".to_owned())
         );
         assert_eq!(
             parse_headings("not a * heading"),
@@ -29,7 +29,7 @@ mod tests {
         );
         assert_eq!(
             parse_headings("******* long heading"),
-            Ok("###### long heading\n".to_owned())
+            Ok("###### long heading".to_owned())
         );
         assert_eq!(
             parse_headings("******** too long heading"),
