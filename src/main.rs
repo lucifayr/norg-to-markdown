@@ -1,4 +1,4 @@
-use std::{fs, io};
+use std::{ffi::OsStr, fs, io, path::Path};
 
 use clap::Parser;
 
@@ -25,7 +25,11 @@ fn main() -> Result<(), io::Error> {
 
     let out_file = args.output.unwrap_or(format!(
         "{}.md",
-        args.input.split(".norg").next().unwrap_or("default.md")
+        Path::new(args.input.split(".norg").next().unwrap_or("default.md"))
+            .file_name()
+            .unwrap_or(OsStr::new("default.md"))
+            .to_str()
+            .unwrap_or("default.md")
     ));
     fs::write(out_file, res)?;
 
