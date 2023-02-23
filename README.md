@@ -14,7 +14,6 @@ not supported yet.
 - [x] checklists
 - [ ] tables
 - [x] links
-- [ ] quotes
 - [x] code blocks
 - [ ] attributes
 
