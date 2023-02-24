@@ -7,14 +7,14 @@ pub fn convert(text: &str) -> Result<String, regex::Error> {
 
     let lines: Vec<String> = pre_processed.lines().map(|l| l.to_owned()).collect();
 
-    let parsed = parse_lines_threaded(lines);
+    let parsed = parse_lines_threaded::<8>(lines);
     post_process(&parsed)
 }
 
-fn parse_lines_threaded(lines: Vec<String>) -> String {
+fn parse_lines_threaded<const S: usize>(lines: Vec<String>) -> String {
     let mut threads = vec![];
     let (sender, receiver) = channel();
-    let chunks = lines.chunks(8);
+    let chunks = lines.chunks(S);
 
     for (index, chunk) in chunks.enumerate() {
         let sender = sender.clone();
